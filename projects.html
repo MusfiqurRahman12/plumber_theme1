@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Projects - PlumberX | Site Development: Ztech Communication</title>
+  <meta name="description" content="Explore our completed plumbing projects including kitchen renovations, bathroom plumbing, sewer lines, and drain cleaning.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="assets/images/logo_clean.png?v=2027">
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-left">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.72 11.72 0 003.68.59 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.02l-2.23 2.09z"/>
+        </svg>
+        <span>Call to our experts : <a href="tel:18004567890">(1800) 456 7890</a></span>
+      </div>
+      <div class="top-bar-right">
+        <button class="btn-book-top" type="button">Book a Appointment</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header & Navigation -->
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="logo-link">
+        <img src="assets/images/logo.png?v=2027" alt="PlumberX Logo" class="logo-img">
+      </a>
+      
+      <nav class="main-nav">
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+          <li class="nav-item has-dropdown">
+            <a href="services-1.html" class="nav-link">
+              Services
+              <svg class="arrow-icon" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="services-1.html" class="dropdown-link">Services 1</a></li>
+              <li><a href="services-2.html" class="dropdown-link">Services 2</a></li>
+              <li><a href="services-3.html" class="dropdown-link">Services 3</a></li>
+              <li><a href="service-repair.html" class="dropdown-link">Plumbing Repairs</a></li>
+            </ul>
+          </li>
+          <li class="nav-item active"><a href="projects.html" class="nav-link">Projects</a></li>
+          <li class="nav-item has-dropdown">
+            <a href="case-study.html" class="nav-link">
+              Pages
+              <svg class="arrow-icon" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="case-study.html" class="dropdown-link">Case Study</a></li>
+              <li><a href="price.html" class="dropdown-link">Price Plans</a></li>
+              <li><a href="shop.html" class="dropdown-link">Shop Page</a></li>
+            </ul>
+          </li>
+          <li class="nav-item has-dropdown">
+            <a href="blog.html" class="nav-link">
+              Blog
+              <svg class="arrow-icon" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="blog.html" class="dropdown-link">Blog Default</a></li>
+              <li><a href="blog-single.html" class="dropdown-link">Single Blog Post</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="shop.html" class="nav-link">Shop</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+        </ul>
+
+        <div class="header-actions">
+          <button class="search-toggle-btn" aria-label="Search">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+          <button class="cart-toggle-btn" aria-label="Cart">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            <span class="cart-badge" id="cartBadgeCount">0</span>
+          </button>
+          <button class="mobile-menu-btn" aria-label="Toggle navigation">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Subpage Banner -->
+  <section class="subpage-banner">
+    <div class="container banner-content">
+      <h1 class="banner-title">Projects</h1>
+      <div class="breadcrumb-list">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-separator">&gt;</span>
+        <span>Projects</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Gallery Section -->
+  <section class="projects-gallery-section">
+    <div class="container">
+      
+      <!-- Filter Navigation -->
+      <div class="gallery-filter-nav">
+        <button class="gallery-filter-btn active" data-filter="all">All</button>
+        <button class="gallery-filter-btn" data-filter="kitchen">Kitchen</button>
+        <button class="gallery-filter-btn" data-filter="bathroom">Bathroom</button>
+        <button class="gallery-filter-btn" data-filter="drain">Drain Cleaning</button>
+        <button class="gallery-filter-btn" data-filter="outside">Outside Plumbing</button>
+        <button class="gallery-filter-btn" data-filter="server">Server Lines Cleaning</button>
+        <button class="gallery-filter-btn" data-filter="tank">Tank Leak Inspections</button>
+      </div>
+
+      <!-- 9 Item Project Grid -->
+      <div class="gallery-grid-9">
+        
+        <!-- Project 1 -->
+        <div class="gallery-card" data-category="kitchen">
+          <img src="assets/images/project_1.jpg?v=2027" alt="Commercial Plumbing Inspection">
+          <div class="gallery-card-overlay">
+            <div class="gallery-action-btns">
+              <button class="gallery-action-btn project-zoom-btn" data-img="assets/images/project_1.jpg?v=2027" title="Zoom In" aria-label="Zoom In">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  <line x1="11" y1="8" x2="11" y2="14"></line>
+                  <line x1="8" y1="11" x2="14" y2="11"></line>
+                </svg>
+              </button>
+              <a href="case-study.html" class="gallery-action-btn" title="View Case Study" aria-label="View Case Study">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="gallery-card" data-category="bathroom">
+          <img src="assets/images/project_2.jpg?v=2027" alt="Bathroom Sink Plumbing">
+          <div class="gallery-card-overlay">
+            <div class="gallery-action-btns">
+              <button class="gallery-action-btn project-zoom-btn" data-img="assets/images/project_2.jpg?v=2027" title="Zoom In" aria-label="Zoom In">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  <line x1="11" y1="8" x2="11" y2="14"></line>
+                  <line x1="8" y1="11" x2="14" y2="11"></line>
+                </svg>
+              </button>
+              <a href="case-study.html" class="gallery-action-btn" title="View Case Study" aria-label="View Case Study">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="gallery-card" data-category="outside">
+          <img src="assets/images/project_3.jpg?v=2027" alt="Outside Excavation & Pipeline">
+          <div class="gallery-card-overlay">
+            <div class="gallery-action-btns">
+              <button class="gallery-action-btn project-zoom-btn" data-img="assets/images/project_3.jpg?v=2027" title="Zoom In" aria-label="Zoom In">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  <line x1="11" y1="8" x2="11" y2="14"></line>
+                  <line x1="8" y1="11" x2="14" y2="11"></line>
+                </svg>
+              </button>
+              <a href="case-study.html" class="gallery-action-btn" title="View Case Study" aria-label="View Case Study">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="gallery-card" data-category="kitchen">
+          <img src="assets/images/project_4.jpg?v=2027" alt="Kitchen Drain Line Fix">
+          <div class="gallery-card-overlay">
+            <div class="gallery-action-btns">
+              <button class="gallery-action-btn project-zoom-btn" data-img="assets/images/project_4.jpg?v=2027" title="Zoom In" aria-label="Zoom In">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  <line x1="11" y1="8" x2="11" y2="14"></line>
+                  <line x1="8" y1="11" x2="14" y2="11"></line>
+                </svg>
+              </button>
+              <a href="case-study.html" class="gallery-action-btn" title="View Case Study" aria-label="View Case Study">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="gallery-card" data-category="drain">
+          <img src="assets/images/project_5.jpg?v=2027" alt="High Pressure Drain Clearing">
+          <div class="gallery-card-overlay">
+            <div class="gallery-action-btns">
+              <button class="gallery-action-btn project-zoom-btn" data-img="assets/images/project_5.jpg?v=2027" title="Zoom In" aria-label="Zoom In">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  <line x1="11" y1="8" x2="11" y2="14"></line>
+                  <line x1="8" y1="11" x2="14" y2="11"></line>
+                </svg>
+              </button>
+              <a href="case-study.html" class="gallery-action-btn" title="View Case Study" aria-label="View Case Study">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="gallery-card" data-category="tank">
+          <img src="assets/images/project_6.jpg?v=2027" alt="Water Tank Valve Seal">
+          <div class="gallery-card-overlay">
+            <div class="gallery-action-btns">
+              <button class="gallery-action-btn project-zoom-btn" data-img="assets/images/project_6.jpg?v=2027" title="Zoom In" aria-label="Zoom In">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  <line x1="11" y1="8" x2="11" y2="14"></line>
+                  <line x1="8" y1="11" x2="14" y2="11"></line>
+                </svg>
+              </button>
+              <a href="case-study.html" class="gallery-action-btn" title="View Case Study" aria-label="View Case Study">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 7 -->
+        <div class="gallery-card" data-category="server">
+          <img src="assets/images/project_7.jpg?v=2027" alt="Underground Sewer Pipe Connection">
+          <div class="gallery-card-overlay">
+            <div class="gallery-action-btns">
+              <button class="gallery-action-btn project-zoom-btn" data-img="assets/images/project_7.jpg?v=2027" title="Zoom In" aria-label="Zoom In">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  <line x1="11" y1="8" x2="11" y2="14"></line>
+                  <line x1="8" y1="11" x2="14" y2="11"></line>
+                </svg>
+              </button>
+              <a href="case-study.html" class="gallery-action-btn" title="View Case Study" aria-label="View Case Study">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 8 -->
+        <div class="gallery-card" data-category="bathroom">
+          <img src="assets/images/project_8.jpg?v=2027" alt="Bathtub Faucet Replacement">
+          <div class="gallery-card-overlay">
+            <div class="gallery-action-btns">
+              <button class="gallery-action-btn project-zoom-btn" data-img="assets/images/project_8.jpg?v=2027" title="Zoom In" aria-label="Zoom In">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  <line x1="11" y1="8" x2="11" y2="14"></line>
+                  <line x1="8" y1="11" x2="14" y2="11"></line>
+                </svg>
+              </button>
+              <a href="case-study.html" class="gallery-action-btn" title="View Case Study" aria-label="View Case Study">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 9 -->
+        <div class="gallery-card" data-category="drain">
+          <img src="assets/images/project_9.jpg?v=2027" alt="Kitchen P-Trap Assembly">
+          <div class="gallery-card-overlay">
+            <div class="gallery-action-btns">
+              <button class="gallery-action-btn project-zoom-btn" data-img="assets/images/project_9.jpg?v=2027" title="Zoom In" aria-label="Zoom In">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  <line x1="11" y1="8" x2="11" y2="14"></line>
+                  <line x1="8" y1="11" x2="14" y2="11"></line>
+                </svg>
+              </button>
+              <a href="case-study.html" class="gallery-action-btn" title="View Case Study" aria-label="View Case Study">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Request Free Quote Strip Button -->
+  <div class="quote-strip-button-wrap">
+    <button class="btn-request-free-quote">Request For A Free Quote</button>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h4 class="footer-col-title">PlumberX Company</h4>
+        <div class="footer-contact-info">
+          <p>Plumberx Company, 215, Mallin Street New York, NY 100 254</p>
+          <p><strong>Phone:</strong> +0120 123 4 56 789</p>
+          <p><strong>Email:</strong> info@plumberx.com</p>
+          <p><strong>Opening:</strong> Mon - Sat: 8am - 7pm</p>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-title">Quick Links</h4>
+        <div class="footer-links-grid">
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="services-1.html">Services</a>
+          <a href="projects.html">Projects</a>
+          <a href="price.html">Price Plans</a>
+          <a href="case-study.html">Case Studies</a>
+          <a href="shop.html">Shop</a>
+          <a href="blog.html">Blog News</a>
+          <a href="contact.html">Contact Us</a>
+          <a href="service-repair.html">Repairs</a>
+        </div>
+      </div>
+
+      <div class="footer-col footer-trust-col">
+        <h4 class="footer-col-title">Certified & Trusted</h4>
+        <img src="assets/images/footer_badge.png?v=2027" alt="100% Quality Guaranteed" class="footer-badge-img">
+        <img src="assets/images/footer_cards.png?v=2027" alt="Accepted Payment Methods" class="footer-cards-img">
+      </div>
+
+      <div class="footer-col footer-plumber-col">
+        <img src="assets/images/footer_plumber.png?v=2027" alt="Professional Plumber" class="footer-plumber-img">
+      </div>
+    </div>
+
+    <div class="container footer-bottom-bar">
+      <div>&copy; 2026 PlumberX. All Rights Reserved.</div>
+      <div>Site Development: <a href="https://www.ztechbd.com" target="_blank" rel="noopener" class="developer-credit">Ztech Communication</a></div>
+    </div>
+  </footer>
+
+  <!-- Reusable Modals -->
+  <div class="modal-overlay" id="appointmentModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>Book an Appointment</h3>
+        <button class="modal-close-btn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group"><input type="text" class="form-input" placeholder="Full Name" required></div>
+          <div class="form-group"><input type="tel" class="form-input" placeholder="Phone Number" required></div>
+          <div class="form-group">
+            <select class="form-select" required>
+              <option value="">Select Service</option>
+              <option value="leaks">Plumbing Leaks</option>
+              <option value="drain">Drain Cleaning</option>
+              <option value="heating">Water Heating & Cooling</option>
+            </select>
+          </div>
+          <div class="form-group"><input type="date" class="form-input" required></div>
+          <button type="submit" class="btn-quote-submit">Confirm Appointment</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="quoteModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>Request Free Quote</h3>
+        <button class="modal-close-btn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group"><input type="text" class="form-input" placeholder="Your Name" required></div>
+          <div class="form-group"><input type="email" class="form-input" placeholder="Your Email" required></div>
+          <div class="form-group"><input type="tel" class="form-input" placeholder="Phone Number" required></div>
+          <button type="submit" class="btn-quote-submit">Submit Quote Request</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="searchModal">
+    <div class="modal-card" style="max-width: 440px;">
+      <div class="modal-header">
+        <h3>Search PlumberX</h3>
+        <button class="modal-close-btn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form onsubmit="event.preventDefault(); showToast('Searching...'); document.getElementById('searchModal').classList.remove('active');">
+          <div class="form-group"><input type="text" class="form-input" placeholder="Type keywords..." required></div>
+          <button type="submit" class="btn-quote-submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lightbox Modal for Project Zoom -->
+  <div class="modal-overlay" id="lightboxModal">
+    <div class="lightbox-card">
+      <button class="lightbox-close-btn modal-close-btn">&times;</button>
+      <img id="lightboxImg" src="assets/images/project_1.jpg?v=2027" alt="Zoomed Project Image">
+    </div>
+  </div>
+
+  <!-- Shopping Cart Drawer -->
+  <div class="cart-drawer-overlay" id="cartDrawerOverlay"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-drawer-header">
+      <h3 style="font-size:16px;">Your Shopping Cart</h3>
+      <button id="closeCartBtn" style="background:none; border:none; color:#ffffff; font-size:24px; cursor:pointer;">&times;</button>
+    </div>
+    <div class="cart-items-container" id="cartItemsContainer">
+      <p style="text-align:center; color:#94a3b8; padding:30px 0;">Your cart is empty.</p>
+    </div>
+    <div class="cart-drawer-footer">
+      <div class="cart-total-row">
+        <span>Subtotal:</span>
+        <span id="cartTotalAmount">$0.00</span>
+      </div>
+      <button class="btn-quote-submit" onclick="showToast('Proceeding to checkout...');">PROCEED TO CHECKOUT</button>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
