@@ -3861,3 +3861,52 @@ button, input, select, textarea {
     grid-template-columns: 1fr;
   }
 }
+
+/* ==========================================================================
+   Elementor Container & Full-Width Normalization
+   ========================================================================== */
+.elementor-section-full_width {
+  width: 100% !important;
+}
+
+.elementor-section-full_width > .elementor-container {
+  max-width: 100% !important;
+  width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.elementor-column-gap-no > .elementor-column > .elementor-widget-wrap {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.elementor-widget-plumberx_hero,
+.elementor-widget-plumberx_promo_strip,
+.elementor-widget-plumberx_certified,
+.elementor-widget-plumberx_services_tabs,
+.elementor-widget-plumberx_projects,
+.elementor-widget-plumberx_coupon,
+.elementor-widget-plumberx_team,
+.elementor-widget-plumberx_testimonials,
+.elementor-widget-plumberx_emergency_banner,
+.elementor-widget-plumberx_blog,
+.elementor-widget-plumberx_partners {
+  width: 100%;
+}
+
+.elementor-widget-plumberx_hero .elementor-widget-container,
+.elementor-widget-plumberx_promo_strip .elementor-widget-container,
+.elementor-widget-plumberx_certified .elementor-widget-container,
+.elementor-widget-plumberx_services_tabs .elementor-widget-container,
+.elementor-widget-plumberx_projects .elementor-widget-container,
+.elementor-widget-plumberx_coupon .elementor-widget-container,
+.elementor-widget-plumberx_team .elementor-widget-container,
+.elementor-widget-plumberx_testimonials .elementor-widget-container,
+.elementor-widget-plumberx_emergency_banner .elementor-widget-container,
+.elementor-widget-plumberx_blog .elementor-widget-container,
+.elementor-widget-plumberx_partners .elementor-widget-container {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
