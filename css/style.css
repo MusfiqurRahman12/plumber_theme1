@@ -382,23 +382,26 @@ button, input, select, textarea {
 .home-hero {
   position: relative;
   background: radial-gradient(circle at 75% 35%, #0e4c73 0%, #093751 55%, #052132 100%);
-  min-height: 600px;
+  min-height: 590px;
   display: flex;
-  align-items: center;
+  align-items: stretch;
   color: #ffffff;
-  padding: 50px 0 0;
+  padding: 40px 0 0;
   overflow: hidden;
 }
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.1fr 1fr 1.1fr;
-  align-items: center;
+  grid-template-columns: 1.15fr 1fr 1.15fr;
+  align-items: stretch;
   gap: 20px;
+  width: 100%;
 }
 
 .hero-text-col {
   z-index: 2;
+  align-self: center;
+  padding: 20px 0 35px;
 }
 
 .hero-subtitle {
@@ -447,12 +450,20 @@ button, input, select, textarea {
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  align-self: flex-end;
   z-index: 2;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  line-height: 0;
+  position: relative;
 }
 
 .hero-plumber-img {
-  max-height: 540px;
-  object-fit: contain;
+  display: block;
+  max-height: 600px;
+  width: auto;
+  margin-bottom: 0;
+  vertical-align: bottom;
   filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.4));
 }
 
@@ -460,6 +471,8 @@ button, input, select, textarea {
   z-index: 2;
   display: flex;
   justify-content: flex-end;
+  align-self: center;
+  padding: 20px 0 35px;
 }
 
 .hero-quote-card {
@@ -2310,24 +2323,41 @@ button, input, select, textarea {
    Shop Page
    ========================================================================== */
 .shop-hero-section {
-  background: linear-gradient(135deg, #093751 0%, #062b3f 100%);
+  background: radial-gradient(circle at 75% 45%, #0e4c73 0%, #093751 55%, #052132 100%);
   color: #ffffff;
-  padding: 50px 0;
+  padding: 60px 0 30px;
   position: relative;
   overflow: hidden;
 }
 
 .shop-hero-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 36px;
   align-items: center;
 }
 
+.shop-hero-img-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 10px 0;
+}
+
 .shop-hero-toilet-img {
-  max-height: 380px;
+  display: block;
+  max-width: 100%;
+  width: auto;
+  max-height: 460px;
   object-fit: contain;
   margin: 0 auto;
+  filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.4));
+  transition: transform 0.3s ease;
+}
+
+.shop-hero-toilet-img:hover {
+  transform: translateY(-4px) scale(1.01);
 }
 
 .btn-shop-hero {
@@ -3248,6 +3278,23 @@ button, input, select, textarea {
   .service1-expertise-grid, .repair-grid, .case-study-grid,
   .shop-hero-grid, .blog-grid-layout, .contact-grid, .price-cards-grid {
     grid-template-columns: 1fr;
+  }
+  .shop-hero-section {
+    padding: 40px 0 30px;
+    text-align: center;
+  }
+  .shop-hero-text h1 {
+    font-size: 34px !important;
+  }
+  .shop-hero-text div,
+  .shop-hero-text p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .shop-hero-toilet-img {
+    max-height: 320px;
+    max-width: 90%;
+    margin-top: 15px;
   }
   .services-tab-layout {
     grid-template-columns: 1fr;
