@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCartDrawer();
   initForms();
   initCouponPrint();
+  initMarquees();
 });
 
 // Toast notification helper
@@ -152,27 +153,138 @@ function initTabs() {
   }
 }
 
-// Project Filter & Lightbox Zoom
+// Project Filter & Shuffle Animation
 function initProjectFilter() {
   const filterBtns = document.querySelectorAll('.gallery-filter-btn');
   const projectCards = document.querySelectorAll('.gallery-card');
+  const galleryGrid = document.querySelector('.gallery-grid-9');
+
+  if (!filterBtns.length || !projectCards.length) return;
+
+  let isAnimating = false;
 
   filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (btn.classList.contains('active') || isAnimating) return;
+
       filterBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       const filterValue = btn.getAttribute('data-filter');
 
-      projectCards.forEach(card => {
-        const category = card.getAttribute('data-category');
-        if (filterValue === 'all' || category === filterValue) {
-          card.style.display = 'block';
-        } else {
-          card.style.display = 'none';
-        }
-      });
+      shuffleGallery(filterValue);
     });
   });
+
+  function shuffleGallery(filter) {
+    isAnimating = true;
+
+    // 1. Capture initial positions of currently visible cards
+    const initialPositions = new Map();
+    projectCards.forEach(card => {
+      if (card.style.display !== 'none') {
+        const rect = card.getBoundingClientRect();
+        initialPositions.set(card, {
+          left: rect.left,
+          top: rect.top,
+          width: rect.width,
+          height: rect.height
+        });
+      }
+    });
+
+    // 2. Identify cards to show and cards to hide
+    const cardsToHide = [];
+    const cardsToShow = [];
+
+    projectCards.forEach(card => {
+      const category = card.getAttribute('data-category') || '';
+      const categories = category.split(' ');
+      const isMatch = (filter === 'all' || categories.includes(filter));
+
+      if (isMatch) {
+        cardsToShow.push(card);
+      } else {
+        cardsToHide.push(card);
+      }
+    });
+
+    // 3. Fade & scale out non-matching cards
+    cardsToHide.forEach(card => {
+      card.style.transition = 'opacity 0.24s cubic-bezier(0.4, 0, 0.2, 1), transform 0.24s cubic-bezier(0.4, 0, 0.2, 1)';
+      card.style.opacity = '0';
+      card.style.transform = 'scale(0.8) translateY(12px)';
+      card.style.pointerEvents = 'none';
+    });
+
+    setTimeout(() => {
+      // 4. Update display states in the DOM
+      cardsToHide.forEach(card => {
+        card.style.display = 'none';
+        card.style.transform = '';
+        card.style.opacity = '';
+      });
+
+      cardsToShow.forEach(card => {
+        const wasHidden = !initialPositions.has(card);
+        card.style.display = 'block';
+        card.style.pointerEvents = 'auto';
+
+        if (wasHidden) {
+          card.style.opacity = '0';
+          card.style.transform = 'scale(0.8) translateY(12px)';
+        }
+      });
+
+      // 5. Compute FLIP delta for remaining cards
+      const transforms = new Map();
+      cardsToShow.forEach(card => {
+        if (initialPositions.has(card)) {
+          const oldPos = initialPositions.get(card);
+          const newRect = card.getBoundingClientRect();
+          const deltaX = oldPos.left - newRect.left;
+          const deltaY = oldPos.top - newRect.top;
+
+          if (Math.abs(deltaX) > 0.5 || Math.abs(deltaY) > 0.5) {
+            transforms.set(card, `translate(${deltaX}px, ${deltaY}px)`);
+          }
+        }
+      });
+
+      // 6. Invert positions instantly without transition
+      cardsToShow.forEach(card => {
+        if (transforms.has(card)) {
+          card.style.transition = 'none';
+          card.style.transform = transforms.get(card);
+        }
+      });
+
+      // Force layout reflow
+      if (galleryGrid) galleryGrid.offsetHeight;
+
+      // 7. Play the smooth shuffle transition with subtle stagger
+      requestAnimationFrame(() => {
+        cardsToShow.forEach((card, index) => {
+          const delay = Math.min(index * 25, 100);
+          card.style.transition = `transform 0.45s cubic-bezier(0.16, 1, 0.3, 1) ${delay}ms, opacity 0.35s ease ${delay}ms`;
+          card.style.transform = 'translate(0, 0) scale(1)';
+          card.style.opacity = '1';
+        });
+
+        // 8. Clean up inline styles after animation finishes
+        setTimeout(() => {
+          cardsToShow.forEach(card => {
+            card.style.transition = '';
+            card.style.transform = '';
+            card.style.opacity = '';
+            card.style.pointerEvents = '';
+          });
+          isAnimating = false;
+        }, 550);
+      });
+
+    }, 240);
+  }
 
   // Lightbox
   const lightboxModal = document.getElementById('lightboxModal');
@@ -329,3 +441,27 @@ function initCouponPrint() {
     });
   });
 }
+
+// Smooth Marquee Touch Controller (Pauses on touch, resumes smoothly after release)
+function initMarquees() {
+  const marquees = document.querySelectorAll('.testimonials-marquee, .partner-logos-marquee');
+  marquees.forEach(marquee => {
+    const track = marquee.querySelector('.testimonials-track, .partner-logos-track');
+    if (!track) return;
+
+    let resumeTimer = null;
+
+    marquee.addEventListener('touchstart', () => {
+      clearTimeout(resumeTimer);
+      track.style.animationPlayState = 'paused';
+    }, { passive: true });
+
+    marquee.addEventListener('touchend', () => {
+      clearTimeout(resumeTimer);
+      resumeTimer = setTimeout(() => {
+        track.style.animationPlayState = 'running';
+      }, 1200);
+    }, { passive: true });
+  });
+}
+
